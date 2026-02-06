@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deconstruct Gel Sunscreen - Ultimate Sun Protection</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #F9F9F9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #FFF8E1 0%, #FFFBF0 100%);
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #2C2C2C;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero .subtitle {
+            font-size: 1.3rem;
+            color: #666;
+            margin-bottom: 40px;
+            font-weight: 400;
+        }
+
+        .product-image-main {
+            max-width: 500px;
+            margin: 40px auto;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .product-image-main img {
+            width: 100%;
+            height: auto;
+            filter: drop-shadow(0 10px 30px rgba(0,0,0,0.1));
+        }
+
+        /* Benefits Grid */
+        .benefits {
+            padding: 80px 20px;
+            background: white;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            color: #2C2C2C;
+            font-weight: 700;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .benefit-card {
+            background: #FFFBF0;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-color: #FFD54F;
+        }
+
+        .benefit-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .benefit-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: #2C2C2C;
+        }
+
+        .benefit-card p {
+            color: #666;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        /* Key Features Section */
+        .key-features {
+            padding: 80px 20px;
+            background: #F9F9F9;
+        }
+
+        .features-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .feature-item {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .feature-item h4 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #2C2C2C;
+            font-weight: 600;
+        }
+
+        .feature-item p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        .check-icon {
+            color: #4CAF50;
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        /* Price Comparison Section */
+        .price-section {
+            padding: 80px 20px;
+            background: white;
+        }
+
+        .price-table {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .price-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .price-table th {
+            background: linear-gradient(135deg, #FFD54F 0%, #FFC107 100%);
+            color: #2C2C2C;
+            padding: 20px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-align: left;
+        }
+
+        .price-table td {
+            padding: 20px;
+            border-bottom: 1px solid #F0F0F0;
+            font-size: 1rem;
+        }
+
+        .price-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .price-table tr:hover {
+            background: #FFFBF0;
+        }
+
+        .price {
+            font-weight: 700;
+            font-size: 1.3rem;
+            color: #2C2C2C;
+        }
+
+        .btn-buy {
+            background: linear-gradient(135deg, #FFD54F 0%, #FFC107 100%);
+            color: #2C2C2C;
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .btn-buy:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 193, 7, 0.4);
+            border-color: #FFA000;
+        }
+
+        /* Related Products */
+        .related-products {
+            padding: 80px 20px;
+            background: #F9F9F9;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .product-card-image {
+            height: 250px;
+            background: #FFFBF0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .product-card-image img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .product-card-content {
+            padding: 25px;
+        }
+
+        .product-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: #2C2C2C;
+        }
+
+        .product-card p {
+            color: #666;
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+        }
+
+        .product-badge {
+            display: inline-block;
+            background: #FFD54F;
+            color: #2C2C2C;
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+
+        /* Testing Certificate */
+        .certification {
+            background: linear-gradient(135deg, #2C2C2C 0%, #424242 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .certification h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .certification p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        .cert-badge {
+            background: #FFD54F;
+            color: #2C2C2C;
+            padding: 15px 30px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 1.2rem;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        /* Footer */
+        footer {
+            background: #2C2C2C;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .price-table {
+                overflow-x: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Ultimate Sun Protection: Matte, Airy & Lightweight</h1>
+            <p class="subtitle">Gel-based formula for Oily, Combination & Normal skin.<br>In-vivo tested SPF 50+ PA+++</p>
+            
+            <div class="product-image-main">
+                <img src="./assests/img/s5.png" alt="Deconstruct Gel Sunscreen Pack of 3">
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits">
+        <div class="container">
+            <h2 class="section-title">Why Choose Deconstruct Gel Sunscreen?</h2>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">☀️</div>
+                    <h3>Prevents Tanning & Aging</h3>
+                    <p>Advanced SPF 50+ PA+++ protection shields your skin from harmful UV rays, preventing sun damage and premature aging.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">✨</div>
+                    <h3>Matte Finish</h3>
+                    <p>Bilkul chip-chip nahi! Get a perfect matte look that lasts all day without any greasy residue.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">🌬️</div>
+                    <h3>Lightweight & Airy</h3>
+                    <p>Ultra-light gel texture that feels almost invisible on skin. You won't even feel you're wearing sunscreen!</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">💧</div>
+                    <h3>Hydration Boost</h3>
+                    <p>Enriched with Phospholipids & Glycerin to maintain optimal hydration levels and skin elasticity.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">🚫</div>
+                    <h3>No White Cast</h3>
+                    <p>Non-oily absorption formula that blends seamlessly without leaving any chalky white residue.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">💪</div>
+                    <h3>Water Resistant</h3>
+                    <p>Stays put even during workouts, swimming, or outdoor activities. Perfect for gym, sports & outdoors.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Features -->
+    <section class="key-features">
+        <div class="container">
+            <h2 class="section-title">Product Highlights</h2>
+            
+            <div class="features-container">
+                <div class="feature-item">
+                    <div class="check-icon">✓</div>
+                    <h4>Broad Spectrum Protection</h4>
+                    <p>UVA & UVB protection</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="check-icon">✓</div>
+                    <h4>For All Skin Types</h4>
+                    <p>Especially oily & combination</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="check-icon">✓</div>
+                    <h4>Fragrance Free</h4>
+                    <p>No added perfumes</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="check-icon">✓</div>
+                    <h4>Non-Comedogenic</h4>
+                    <p>Won't clog pores</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certification Section -->
+    <section class="certification">
+        <div class="container">
+            <h2>In-Vivo Tested SPF 50+ PA+++</h2>
+            <p>Our sunscreen has undergone rigorous in-vivo testing at CCFT Laboratories to ensure the highest standard of sun protection. Certified for broad spectrum protection with SPF 50+ and PA+++ rating.</p>
+            <div class="cert-badge">Lab Certified • Dermatologically Tested</div>
+        </div>
+    </section>
+
+    <!-- Price Comparison Section -->
+    <section class="price-section">
+        <div class="container">
+            <h2 class="section-title">Smart Buy - Price Comparison</h2>
+            
+            <div class="price-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Platform</th>
+                            <th>India Price (INR)</th>
+                            <th>US Price (USD Approx.)</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Amazon India</strong></td>
+                            <td class="price">₹879</td>
+                            <td>$10.60</td>
+                            <td><a href="https://amzn.to/4aAzwzC" target="https://amzn.to/4aAzwzC" class="btn-buy">Buy on Amazon</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Flipkart</strong></td>
+                            <td class="price">₹899</td>
+                            <td>$10.85</td>
+                            <td><a href="https://fktr.in/QGosOjA" target="https://fktr.in/QGosOjA" class="btn-buy">Buy on Flipkart</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Products Section -->
+    <section class="related-products">
+        <div class="container">
+            <h2 class="section-title">More From Deconstruct</h2>
+            
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-card-image">
+                        <img src="./assests/img/s6.png" alt="Deconstruct Brightening Sunscreen">
+                    </div>
+                    <div class="product-card-content">
+                        <h3>Fluid Brightening Sunscreen</h3>
+                        <p>For dry, normal & combination skin. Dewy finish with glowing, hydrated skin.</p>
+                        <span class="product-badge">SPF 50+ PA+++</span>
+                        <a href="https://amzn.to/4aEzPsf" target="https://amzn.to/4aEzPsf" class="btn-buy" style="margin-top: 10px; display: inline-block;">Buy on Amazon</a>
+                        <a href="https://fktr.in/wum3liC" target="https://fktr.in/wum3liC" class="btn-buy" style="margin-top: 10px; display: inline-block;">Buy on Amazon</a>
+
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-card-image">
+                        <img src="./assests/img/s7.png" alt="Deconstruct Brightening Sunscreen">
+                    </div>
+                    <div class="product-card-content">
+                        <h3>Invisible Water Sunscreen</h3>
+                        <p>For dry & normal skin. Natural skin-like finish that instantly cools and blends seamlessly.</p>
+                        <span class="product-badge">Water Resistant</span>
+                        <a href="https://amzn.to/3LS9aji" target="https://amzn.to/3LS9aji" class="btn-buy" style="margin-top: 15px; display: inline-block;">Buy on Amazon</a>
+                        <a href="https://fktr.in/cukSX1m" target="https://fktr.in/cukSX1m" class="btn-buy" style="margin-top: 15px; display: inline-block;">Buy on Flipkart</a>
+
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-card-image">
+                        <img src="./assests/img/s8.png" alt="Deconstruct Skincare Range">
+                    </div>
+                    <div class="product-card-content">
+                        <h3>Complete Skincare Range</h3>
+                        <p>Explore our full range of scientifically formulated, dermatologically tested skincare products.</p>
+                        <span class="product-badge">Explore More</span>
+                        <a href="https://amzn.to/3Zl2Ofm" target="https://amzn.to/3Zl2Ofm" class="btn-buy" style="margin-top: 15px; display: inline-block;">View All Products</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Deconstruct. All rights reserved. | Highly Effective Yet Gentle</p>
+            <p style="margin-top: 10px; font-size: 0.85rem;">Dermatologically Tested • Fragrance Free • Non-Comedogenic</p>
+        </div>
+    </footer>
+
+</body>
+</html>
